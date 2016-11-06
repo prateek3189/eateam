@@ -1,0 +1,49 @@
+@import "_variable.less";
+@import "_icons.less";
+
+// ipad portrait
+@media only screen and (max-device-width : 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .header-container {
+        height: 350px;
+
+        h1 {
+            margin-top: 20px;
+        }
+    }
+    .header{
+        .social-icons {
+            height: auto;
+        }
+        .mobile-nav-image {
+            display: block;
+            height: 40px;
+        }
+        .nav-menu {
+            .nav-menu-list {
+                display: none;
+                background: @white;
+                width: 100%;
+
+                li {
+                    width: 100%;
+                    margin: 0;
+                    text-align: center;
+                    padding: 10px;
+
+                    a {
+                        color: @gray6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// iPhone 6 Plus
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
+
+}

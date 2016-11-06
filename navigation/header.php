@@ -6,7 +6,7 @@
 
 	<title><?php echo TITLE;?></title>
 	<link href="<?php echo IMAGE_PATH_HTTP."/fev-logo.jpg";?>" type="image/x-icon" rel="icon">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   	<?php
 		// Adding CSS
 		if(count($AddCSS)){
@@ -32,17 +32,26 @@
 	include(NAVIGATION_PATH."/svg.php");
 ?>
 <body>
-<div class="container">
-  	<div class="row header">
-		<div class="col-sm-4">
-			<a href="https://www.facebook.com/eateaminc"><i><?php echo FACEBOOK;?></i></a>
-			<a href="http://twitter.com/#!/EateamInc"><i><?php echo TWEETER;?></a>
-			<a href="http://www.linkedin.com/company/eateam-inc">Linked In</a>
-		</div>
-		<div class="col-sm-4">
-			Empty
-		</div>
-		<div class="col-sm-4">
-			Call Us
-		</div>
-  	</div>
+<div class="header container">
+	<!-- social icons -->
+	<div class="social-icons">
+		<ul>
+			<li><a href="#"><i class="icon-facebook"></i></a></li>
+			<li><a href="#"><i class="icon-tweeter"></i></a></li>
+			<li><a href="#"><i class="icon-in"></i></a></li>
+			<li><a href="#">LOGIN</a></li>
+		</ul>
+	</div>
+
+	<!-- Logo and Nav Menu -->
+	<div class="nav-menu">
+		<img src="<?php echo IMAGE_PATH_HTTP;?>/logo.jpg" alt="Logo" class="logo-image" />
+		<img src="<?php echo IMAGE_PATH_HTTP;?>/mobile-nav-icon.png" alt="Logo" class="mobile-nav-image" />
+		<ul class="nav-menu-list">
+			<li><a href="#">ABOUT</i></a></li>
+			<li><a href="#">SERVICES</a></li>
+			<li><a href="#">TALENT</a></li>
+			<li><a href="#">CONTACT</a></li>
+		</ul>
+	</div>
+</div>

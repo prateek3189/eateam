@@ -3,7 +3,7 @@
     include("config/config.php");
 
     //Add JS
-	$AddJS	=	array("jquery");
+	$AddJS	=	array("jquery", "common");
 
     //Add CSS
 	$AddCSS	=	array("style");
