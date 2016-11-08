@@ -1,6 +1,12 @@
 @import "_variable.less";
 @import "_icons.less";
 
+// ipad landscpe
+@media only screen and (max-device-width : 1024px) {
+    .header-container {
+        height: 500px;
+    }
+}
 // ipad portrait
 @media only screen and (max-device-width : 768px) {
     .container {
@@ -12,6 +18,7 @@
 
         h1 {
             margin-top: 20px;
+            width: 100%;
         }
     }
     .header{
@@ -43,7 +50,24 @@
     }
 }
 
-// iPhone 6 Plus
-@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) {
+// iPhone 6s Plus
+@media only screen and (max-device-width : 414px) {
+    .header-container {
+        height: 250px;
 
+        h1 {
+            font-size: 30px;
+        }
+    }
+}
+
+// Small Mobile
+@media only screen and (max-device-width : 360px) {
+    .header-container {
+        height: 250px;
+
+        h1 {
+            font-size: 25px;
+        }
+    }
 }
