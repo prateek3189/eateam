@@ -23,7 +23,7 @@
   $req_uri	=	"/eateam/";
 
   //Title
-	define("TITLE",'SonarQube');
+	define("TITLE",'EATeam');
 
 	//FOLDER PATH
 	define('FOLDER_PATH_HTTP', $protocol.'://'.HTTP_HOST.$req_uri);

@@ -48,6 +48,7 @@ ul{
 
 // Different header BG
 .desktop-header-container {background: url('../images/desktop-bg.jpg') no-repeat center center; background-size: cover;}
+.clients-bg {background: url('../images/clients-bg.jpg') no-repeat center center; background-size: cover;}
 
 .container {
     width: 980px;
@@ -96,4 +97,81 @@ ul{
         display: none;
     }
 }
+
+// Features
+.features {
+    position: relative;
+    top: -130px;
+
+    .features-box {
+        padding: 0 10px;
+        margin-bottom: 20px;
+
+        .feature-content {
+            height: 250px;
+            background: @primary-color;
+            padding: 15px;
+            color: @white;
+
+            i {
+                position: relative;
+                top: 5px;
+            }
+            label {
+                margin-left: 10px;
+                font-size: 18px;
+                display: inline-block;
+            }
+
+            article {
+                padding: 15px;
+                width: 100%;
+                text-align: justify;
+                height: 150px;
+                color: @white7;
+            }
+
+            a {
+                margin-left: 15px;
+                font-weight: bold;
+            }
+        }
+
+        .feature-talent {
+            background: url('../images/talent-grid-bg.jpg') no-repeat;
+            background-size: cover;
+
+            h2 {
+                color: @gray3;
+            }
+
+            button {
+                width: 100%;
+                color: @gray3;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 10px 0;
+                margin-top: 25px;
+                background: @ligth-green;
+                border: 0;
+            }
+        }
+    }
+    .features-box:first-child {
+        padding-left: 0;
+    }
+
+    .features-box:last-child {
+        padding-right: 0;
+    }
+}
+
+.clients {
+    h3 {
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+// Media Query
 @import "_media.less";
