@@ -32,6 +32,19 @@ ul{
   padding:0;
 }
 
+h1, h2, h3, h4, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: 0;
+    background: @primary-color;
+    color: @white;
+    font-weight: bold;
+    padding: 10px 5px;
+}
+
 .header-container {
     height: 700px;
     padding-top: 100px;
@@ -49,6 +62,7 @@ ul{
 // Different header BG
 .desktop-header-container {background: url('../images/desktop-bg.jpg') no-repeat center center; background-size: cover;}
 .clients-bg {background: url('../images/clients-bg.jpg') no-repeat center center; background-size: cover;}
+.getting-started-bg {background: url('../images/getting-started-bg.jpg') no-repeat center center; background-size: cover;}
 
 .container {
     width: 980px;
@@ -56,7 +70,7 @@ ul{
 }
 
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -140,6 +154,7 @@ ul{
         .feature-talent {
             background: url('../images/talent-grid-bg.jpg') no-repeat;
             background-size: cover;
+            position: relative;
 
             h2 {
                 color: @gray3;
@@ -151,9 +166,8 @@ ul{
                 font-weight: bold;
                 font-size: 20px;
                 padding: 10px 0;
-                margin-top: 25px;
                 background: @ligth-green;
-                border: 0;
+                margin-top: 60px;
             }
         }
     }
@@ -167,11 +181,84 @@ ul{
 }
 
 .clients {
+    text-align: center;
+    padding-bottom: 40px;
+
     h3 {
         font-weight: bold;
         text-align: center;
     }
+
+    article {
+        color: @grayCD;
+        width: 80%;
+        text-align: justify;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    button {
+        margin-top: 30px;
+    }
 }
 
+.getting-started {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+
+    h3 {
+        font-weight: bold;
+        text-align: center;
+        color: @white;
+    }
+
+    article {
+        color: @white;
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    button {
+        margin-top: 30px;
+        background: none;
+        border: 2px solid @white;
+    }
+}
+
+.site-links {
+    padding: 40px 0;
+    background: @dark-gray;
+    color: @white;
+
+    ul {
+        margin-top: 30px;
+
+        a {
+            color: @grayC;
+
+            &:hover {
+                color: @white;
+            }
+        }
+    }
+
+    .social-icons {
+        margin-top: 30px;
+
+        a {
+            margin-right: 30px;
+        }
+    }
+}
+
+footer {
+    background: @black;
+    padding: 30px 0;
+    color: @grayC;
+    text-align: center;
+}
 // Media Query
 @import "_media.less";
