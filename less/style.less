@@ -16,6 +16,11 @@ a{
         color: @grayC;
         text-decoration:none;
     }
+
+    &:visited {
+        color: @grayC;
+        text-decoration:none;
+    }
   }
 body{
   padding:0;
@@ -32,7 +37,7 @@ ul{
   padding:0;
 }
 
-h1, h2, h3, h4, h6 {
+h1, h2, h3, h4, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -46,7 +51,7 @@ button {
 }
 
 .header-container {
-    height: 700px;
+    height: 500px;
     padding-top: 100px;
 
     h1 {
@@ -54,13 +59,15 @@ button {
         width: 500px;
         text-align: center;
         margin: 0 auto;
-        margin-top: 150px;
+        margin-top: 100px;
         font-weight: bold;
     }
 }
 
 // Different header BG
 .desktop-header-container {background: url('../images/desktop-bg.jpg') no-repeat center center; background-size: cover;}
+.about-header-container {background: url('../images/about-bg.jpg') no-repeat center center; background-size: cover;}
+.talent-header-container {background: url('../images/talent-bg.jpg') no-repeat center center; background-size: cover;}
 .clients-bg {background: url('../images/clients-bg.jpg') no-repeat center center; background-size: cover;}
 .getting-started-bg {background: url('../images/getting-started-bg.jpg') no-repeat center center; background-size: cover;}
 
@@ -87,7 +94,21 @@ button {
             li{
                 display: inline-block;
                 margin-left: 25px;
+
+                &.selected {
+                    border-bottom: 2px solid @white;
+                }
             }
+        }
+
+        a {
+            color: @white;
+            font-weight: bold;
+        }
+
+        a.login {
+            position: relative;
+            top: -3px;
         }
     }
     .nav-menu {
@@ -96,6 +117,7 @@ button {
                 margin-left: 80px;
                 font-weight: bold;
                 font-size: 16px;
+                height: 25px;
             }
         }
     }
@@ -157,17 +179,21 @@ button {
             position: relative;
 
             h2 {
-                color: @gray3;
+                color: @black;
             }
 
             button {
-                width: 100%;
+                width: 250px;
                 color: @gray3;
                 font-weight: bold;
-                font-size: 20px;
+                font-size: 18px;
                 padding: 10px 0;
                 background: @ligth-green;
-                margin-top: 60px;
+                position: absolute;
+                bottom: 35px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
             }
         }
     }
@@ -235,12 +261,15 @@ button {
 
     ul {
         margin-top: 30px;
+        li {
+            line-height: 25px;
 
-        a {
-            color: @grayC;
+            a {
+                color: @grayC;
 
-            &:hover {
-                color: @white;
+                &:hover {
+                    color: @white;
+                }
             }
         }
     }
@@ -250,7 +279,176 @@ button {
 
         a {
             margin-right: 30px;
+            display: inline-block;
         }
+    }
+}
+
+.about-us {
+    display: flex;
+    width: 700px;
+    padding: 40px 0;
+
+    .about-left-panel {
+        display: inline-block;
+        width: 25%;
+
+        ul {
+            li {
+                margin-top: 15px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                a {
+                    color: @gray3;
+                    font-weight: bold;
+                }
+
+                a.active {
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+
+    .about-right-panel {
+        display: inline-block;
+        width: 75%;
+
+        ul {
+            list-style: disc;
+            margin: 20px 0;
+            padding-left: 30px;
+            font-size: 12px;
+        }
+
+        h4 {
+            color: @black;
+            margin: 40px 0 18px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        b {
+            margin: 20px 0;
+            display: block;
+        }
+    }
+
+
+}
+
+.talent-header-container {
+    button {
+        width: 200px;
+        margin: 70px auto 0;
+        display: block;
+        background: @ligth-green;
+        color: @black;
+    }
+}
+
+.talent-desc {
+    border: 2px solid @primary-color;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.talent-desc-container {
+    padding: 0 20px;
+}
+
+.network-container {
+    margin-top: 40px;
+}
+
+.accordian {
+    margin-bottom: 40px;
+
+    .accord-small {
+        color: @primary-color;
+    }
+
+    .small-desc {
+        width: 100%;
+        display: block;
+    }
+
+    .accordian-head {
+        padding-bottom: 20px;
+        position: relative;
+        background: @grayE;
+        padding: 20px;
+        margin-top: 10px;
+
+        a {
+            width: 33px;
+            height: 33px;
+            position: absolute;
+            top: 35px;
+            right: 20px;
+        }
+    }
+
+    .accordian-content {
+        background: @grayE;
+        border-top: 1px solid @gray6;
+        padding: 20px;
+
+        b {
+            margin-top: 20px;
+            display: block;
+        }
+    }
+
+    p {
+        margin-top: 20px;
+    }
+}
+
+.network-right-panel {
+    padding-top: 10px;
+
+    b.heading {
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid @gray3;
+        padding-bottom: 10px;
+    }
+
+    .right-link {
+        margin-top: 20px;
+
+        a {
+            color: @gray3;
+            font-size: 12px;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
+    .verify {
+        margin: 20px 0;
+    }
+
+    button {
+        margin-top: 20px;
+        background: none;
+        color: @black;
+        border: 3px solid @gray3;
+    }
+}
+
+.talent-resume {
+    background: @azur;
+    margin-top: 0;
+
+    .container {
+        width: 620px;
     }
 }
 

@@ -5,8 +5,8 @@
 			<div class="col-sm-3">
 				<h4>CORPORATE</h4>
 				<ul>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Eateam strategy</a></li>
+					<li><a href="<?php echo FOLDER_PATH_HTTP;?>about.php#aboutus">About Us</a></li>
+					<li><a href="<?php echo FOLDER_PATH_HTTP;?>about.php#eateamstrategy">Eateam strategy</a></li>
 					<li><a href="#">Mission Statement</a></li>
 					<li><a href="#">Advantage</a></li>
 					<li><a href="#">Management Team</a></li>
@@ -44,9 +44,9 @@
 					<li>Fax: 732-339-0039</li>
 					<li>Email: info@eateam.com</li>
 					<li class="social-icons">
-						<a href="#"><i class="icon-facebook"></i></a>
-						<a href="#"><i class="icon-tweeter"></i></a>
-						<a href="#"><i class="icon-in"></i></a>
+						<a href="#"><i><?php echo FACEBOOK; ?></i></a>
+						<a href="#"><i><?php echo TWEETER; ?></i></a>
+						<a href="#"><i class="icon-in"><?php echo LINKEDIN; ?></i></a>
 					</li>
 				</address>
 			</div>

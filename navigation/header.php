@@ -36,22 +36,22 @@
 	<!-- social icons -->
 	<div class="social-icons">
 		<ul>
-			<li><a href="#"><i class="icon-facebook"></i></a></li>
-			<li><a href="#"><i class="icon-tweeter"></i></a></li>
-			<li><a href="#"><i class="icon-in"></i></a></li>
-			<li><a href="#">LOGIN</a></li>
+			<li><a href="#"><i><?php echo FACEBOOK; ?></i></a></li>
+			<li><a href="#"><i><?php echo TWEETER; ?></i></a></li>
+			<li><a href="#"><i class="icon-in"><?php echo LINKEDIN; ?></i></a></li>
+			<li><a href="#" class="login">LOGIN</a></li>
 		</ul>
 	</div>
 
 	<!-- Logo and Nav Menu -->
 	<div class="nav-menu">
-		<img src="<?php echo IMAGE_PATH_HTTP;?>/logo.jpg" alt="Logo" class="logo-image" />
+		<a href="<?php echo FOLDER_PATH_HTTP;?>"><img src="<?php echo IMAGE_PATH_HTTP;?>/logo.jpg" alt="Logo" class="logo-image" /></a>
 		<img src="<?php echo IMAGE_PATH_HTTP;?>/mobile-nav-icon.png" alt="Logo" class="mobile-nav-image" />
 		<ul class="nav-menu-list">
-			<li><a href="#">ABOUT</i></a></li>
-			<li><a href="#">SERVICES</a></li>
-			<li><a href="#">TALENT</a></li>
-			<li><a href="#">CONTACT</a></li>
+			<li class="<?php echo $page === 'ABOUT' ? 'selected': '';?>"><a href="<?php echo FOLDER_PATH_HTTP;?>about.php">ABOUT</i></a></li>
+			<li class="<?php echo $page === 'SERVICES' ? 'selected': '';?>"><a href="#">SERVICES</a></li>
+			<li class="<?php echo $page === 'TALENT' ? 'selected': '';?>"><a href="<?php echo FOLDER_PATH_HTTP;?>talent.php">TALENT</a></li>
+			<li class="<?php echo $page === 'CONTACT' ? 'selected': '';?>"><a href="#">CONTACT</a></li>
 		</ul>
 	</div>
 </div>

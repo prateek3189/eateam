@@ -27,19 +27,22 @@
         }
         .mobile-nav-image {
             display: block;
-            height: 40px;
+            height: 30px;
         }
         .nav-menu {
             .nav-menu-list {
                 display: none;
                 background: @white;
                 width: 100%;
+                position: relative;
+                z-index: 100;
+                padding: 10px 0;
 
                 li {
                     width: 100%;
                     margin: 0;
                     text-align: center;
-                    padding: 10px;
+                    padding-bottom: 10px;
 
                     a {
                         color: @gray6;
@@ -53,17 +56,29 @@
         .features-box:first-child, .features-box:last-child {
             padding: 0 10px;
         }
-        .features-box {
-            .feature-talent {
-                button {
-                    font-size: 15px;
-                    margin-top: 60px;
-                }
-            }
-        }
     }
 
     .site-links {
+        display: none;
+    }
+
+    .about-us {
+
+        .about-left-panel {
+            display: none;
+       }
+
+       .about-right-panel {
+           width: 100%;
+           padding: 0 20px;
+       }
+    }
+
+    .network-left-panel {
+        width: 100%;
+    }
+
+    .network-right-panel {
         display: none;
     }
 }
@@ -80,6 +95,14 @@
 
     .features {
         top: -30px;
+
+        .features-box {
+             .feature-talent {
+                 h2 {
+                     font-size: 38px;
+                 }
+             }
+        }
     }
 
     .clients {
@@ -94,9 +117,35 @@
         }
     }
 
+    .talent-header-container {
+        h1 {
+            font-size: 22px;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+    }
     footer {
         padding: 20px 0;
         font-size: 12px;
+    }
+
+    .accordian {
+        .accordian-head {
+            h3 {
+                font-size: 18px;
+            }
+
+            a {
+                right: 10px;
+            }
+        }
+    }
+    .talent-resume {
+        .container {
+            width: 100%;
+        }
     }
 }
 
