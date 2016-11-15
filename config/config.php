@@ -1,5 +1,5 @@
 <?php
-	//config.php for all configurations
+    //config.php for all configurations
 
   //Print function_exists
   function pr($arr){
@@ -12,7 +12,7 @@
 	session_start();
 
 	//ERROR Reporting
-	error_reporting(E_ERROR | E_WARNING | E_PARSE);
+	// error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 	//Default Paths
 	$protocol	=	explode('/',$_SERVER['SERVER_PROTOCOL']);
