@@ -8,9 +8,9 @@
     //Add CSS
 	$AddCSS	=	array("style");
 
-    $page = 'HOME';
+    $page   =   "TALENT";
 
     //View HTML
-	include(VIEW_PATH."/index.html");
+	include(VIEW_PATH."/contact.html");
 
 ?>
