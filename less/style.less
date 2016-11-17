@@ -465,7 +465,27 @@ button {
 
     b {
         border-bottom: 1px solid @gray3;
-        padding-bottom: 10px; 
+        padding-bottom: 10px;
+        height: 30px;
+        display: block;
+    }
+
+    ul.contact-left {
+        padding-top: 10px;
+
+        li {
+            margin-bottom: 20px;
+            display: flex;
+
+            i, span {
+                display: inline-block;
+            }
+
+            span {
+                width: 150px;
+                margin-left: 20px;
+            }
+        }
     }
 }
 
@@ -475,5 +495,66 @@ footer {
     color: @grayC;
     text-align: center;
 }
+
+form {
+    margin-top: 20px;
+
+    .field-box {
+        border: 2px solid @grayC;
+        padding: 15px;
+        position: relative;
+        height: 60px;
+        margin-bottom: 15px;
+
+        &.active {
+            border-color: @primary-color;
+        }
+
+        label {
+            font-size: 20px;
+            color: @grayC;
+            position: absolute;
+            width: 100%;
+        }
+
+        input[type=text] {
+            display: none;
+            position: absolute;
+            bottom: 5px;
+            width: 80%;
+            border: 0;
+
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+
+    .textarea-field {
+        position: relative;;
+        height: 150px;
+        padding: 0;
+
+        .textarea-label {
+            left: 10px;
+        }
+
+        textarea {
+            height: 140px;
+            width: 100%;
+            resize: none;
+            border: 0;
+            outline: 0;
+        }
+    }
+    button {
+        width: 150px;
+    }
+}
+
+#map {
+    height: 500px;
+}
+
 // Media Query
 @import "_media.less";

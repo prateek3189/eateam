@@ -3,11 +3,12 @@
     include("config/config.php");
 
     //Add JS
-	$AddJS	=	array("jquery", "common");
+	$AddJS	=	array("jquery", "common", "form");
 
     //Add CSS
 	$AddCSS	=	array("style");
 
+    // Form
     $page   =   "TALENT";
 
     //View HTML
