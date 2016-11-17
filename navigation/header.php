@@ -31,7 +31,7 @@
 <?php
 	include(NAVIGATION_PATH."/svg.php");
 ?>
-<body>
+<body oncontextmenu="return false">
 <div class="header container">
 	<!-- social icons -->
 	<div class="social-icons">

@@ -1,3 +1,11 @@
+// Disable developer mode
+if(true) {
+    $(document).keydown(function(e){
+        if(e.which === 123 || e.which === 17 || e.which === 83) {
+            return false;
+        }
+    });
+}
 $(document).ready(function(){
     $('.mobile-nav-image').on('click', function(){
         $('.nav-menu-list').toggle();
