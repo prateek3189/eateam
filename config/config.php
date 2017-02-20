@@ -12,7 +12,7 @@
 	session_start();
 
 	// DEV_MODE
-    define("DEV_MODE", false);
+    define("DEV_MODE", true);
 
 	if(DEV_MODE) {
         //ERROR Reporting
