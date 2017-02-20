@@ -1,14 +1,13 @@
 <?php 
 	//Index.php will be the first landing page to show login box for Lead and HR
-  include("config/config.php");
-	
+	include_once("config/config.php");
 	//Add CSS
 	$AddCSS	=	array("style");
-  
-  //Add JS
-	$AddJS	=	array("common");
-    
+		
+	//User Login Flag
+	$_SESSION['login'] = 1;	
+	  
 	//View HTML
-	include(VIEW_PATH."/index.html");
+	include_once(VIEW_PATH."/about_us.html");
 	
 ?>

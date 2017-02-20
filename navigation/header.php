@@ -2,12 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php echo TITLE;?></title>
-	<link href="<?php echo IMAGE_PATH_HTTP."/fev-logo.jpg";?>" type="image/x-icon" rel="icon">
-  	<?php
-		// Adding CSS
+  <?php
 		if(count($AddCSS)){
 			foreach($AddCSS as $css){
 	?>
@@ -15,8 +12,11 @@
 	<?php
 			}
 		}
+	?>
 
-		// Adding JS
+	<link href="<?php echo IMAGE_PATH_HTTP."/fevicon.png";?>" type="image/x-icon" rel="icon">
+
+	<?php
 		if(count($AddJS)){
 			foreach($AddJS as $js){
 	?>
@@ -26,12 +26,18 @@
 		}
 	?>
 </head>
-<body <?php if(!DEV_MODE) {echo 'oncontextmenu="return false"';}?>>
-<header>
-	<div class="logo">
-		<img src="<?php echo IMAGE_PATH_HTTP."/logo.png"?>" alt="Logo">
-	</div>
-</header>
-<?php
-	include_once(NAVIGATION_PATH."/nav.php");
-?>
+<body>
+<!-- Success or Error Messages-->
+<div class="action_messages success">Bruce Wayn added as your friend successfully.</div>
+<div class="action_messages failure">Bruce Wayn added as your friend successfully.</div>
+<div class="main">
+  <header>
+    <a href="dashboard.php"><img src="<?php echo IMAGE_PATH_HTTP."/logo.png";?>"/></a>
+		<?php
+      if($_SESSION['login'] == '1'){
+    ?>
+          <div class="welcome_heading">Welcome <a href="<?php echo FOLDER_PATH_HTTP.'profile.php';?>" class="username_text">Prateek Magarde</span> | <a href="<?php echo FOLDER_PATH_HTTP;?>logout.php" class="header_logout_link">Logout</a> </div>
+          <?php
+      }
+    ?>
+	</header>

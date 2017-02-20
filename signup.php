@@ -3,12 +3,12 @@
   include("config/config.php");
 	
 	//Add CSS
-	$AddCSS	=	array("style");
-  
-  //Add JS
+	$AddCSS	=	array("style","login");
+	
+	//Add JS
 	$AddJS	=	array("common");
-    
+	  
 	//View HTML
-	include(VIEW_PATH."/index.html");
+	include(VIEW_PATH."/signup.html");
 	
 ?>
