@@ -6,7 +6,6 @@
 
 	<title><?php echo TITLE;?></title>
 	<link href="<?php echo IMAGE_PATH_HTTP."/fev-logo.jpg";?>" type="image/x-icon" rel="icon">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   	<?php
 		// Adding CSS
 		if(count($AddCSS)){
@@ -26,32 +25,13 @@
 			}
 		}
 	?>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
+<body <?php if(!DEV_MODE) {echo 'oncontextmenu="return false"';}?>>
+<header>
+	<div class="logo">
+		<img src="<?php echo IMAGE_PATH_HTTP."/logo.png"?>" alt="Logo">
+	</div>
+</header>
 <?php
-	include(NAVIGATION_PATH."/svg.php");
+	include_once(NAVIGATION_PATH."/nav.php");
 ?>
-<body oncontextmenu="return false">
-<div class="header container">
-	<!-- social icons -->
-	<div class="social-icons">
-		<ul>
-			<li><a href="#"><i><?php echo FACEBOOK; ?></i></a></li>
-			<li><a href="#"><i><?php echo TWEETER; ?></i></a></li>
-			<li><a href="#"><i class="icon-in"><?php echo LINKEDIN; ?></i></a></li>
-			<li><a href="#" class="login">LOGIN</a></li>
-		</ul>
-	</div>
-
-	<!-- Logo and Nav Menu -->
-	<div class="nav-menu">
-		<a href="<?php echo FOLDER_PATH_HTTP;?>"><img src="<?php echo IMAGE_PATH_HTTP;?>/logo.png" alt="Logo" class="logo-image" /></a>
-		<img src="<?php echo IMAGE_PATH_HTTP;?>/mobile-nav-icon.png" alt="Logo" class="mobile-nav-image" />
-		<ul class="nav-menu-list">
-			<li class="<?php echo $page === 'ABOUT' ? 'selected': '';?>"><a href="<?php echo FOLDER_PATH_HTTP;?>about.php">ABOUT</i></a></li>
-			<li class="<?php echo $page === 'SERVICES' ? 'selected': '';?>"><a href="#">SERVICES</a></li>
-			<li class="<?php echo $page === 'TALENT' ? 'selected': '';?>"><a href="<?php echo FOLDER_PATH_HTTP;?>talent.php">TALENT</a></li>
-			<li class="<?php echo $page === 'CONTACT' ? 'selected': '';?>"><a href="<?php echo FOLDER_PATH_HTTP;?>contact.php">CONTACT</a></li>
-		</ul>
-	</div>
-</div>

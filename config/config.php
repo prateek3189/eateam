@@ -1,6 +1,4 @@
 <?php
-    //config.php for all configurations
-
   //Print function_exists
   function pr($arr){
     echo "<pre>";
@@ -11,8 +9,13 @@
 	//session start
 	session_start();
 
-	//ERROR Reporting
-	// error_reporting(E_ERROR | E_WARNING | E_PARSE);
+    // DEV_MODE
+    define("DEV_MODE", false);
+
+	if(DEV_MODE) {
+        //ERROR Reporting
+        error_reporting(E_ERROR | E_WARNING | E_PARSE);
+    }
 
 	//Default Paths
 	$protocol	=	explode('/',$_SERVER['SERVER_PROTOCOL']);
@@ -20,10 +23,14 @@
 	define('HTTP_HOST', $_SERVER['HTTP_HOST']);
 	define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT']);
 
-  $req_uri	=	"/eateam/";
+    if(DEV_MODE) {
+        $req_uri	=	"/invinciblezone/";
+    } else {
+        $req_uri	=	"/";
+    }
 
   //Title
-	define("TITLE",'EATeam');
+	define("TITLE",'Invincible');
 
 	//FOLDER PATH
 	define('FOLDER_PATH_HTTP', $protocol.'://'.HTTP_HOST.$req_uri);
