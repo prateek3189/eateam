@@ -9,7 +9,7 @@
 	$AddJS	=	array("common");
 
 	//User Login Flag
-	$_SESSION['login'] = 1;
+	$_SESSION['login'] = 0;
 
 	//View HTML
 	include_once(VIEW_PATH."/index.html");

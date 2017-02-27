@@ -1,9 +1,8 @@
-<?php 
+<?php
 	include(NAVIGATION_PATH."/header.php");
 ?>
 <div class="container">
-  <?php include(NAVIGATION_PATH."/navbar.php");?>
-  <?php include(NAVIGATION_PATH."/notification.php");?>
+  <?php include(NAVIGATION_PATH."/left-menu.php");?>
   <div class="content">
       <div class="gallery_tab">
         <button onclick="return changeGalleryType('I')">Photos</button>
@@ -107,7 +106,7 @@
             <span class="media_desc">Image title</span>
             <span class="media_date">Mar 19,2015</span>
             <a href="javascript:void(0)" onclick="return deleteImage('1')"><i class="icon-delete"></i></a>
-          </li>          
+          </li>
         </ul>
       </div>
       <div class="gallary_grid" id="video_grid" style="display:none;">
@@ -285,7 +284,7 @@
             <span class="media_date">Mar 19,2015</span>
             <a href="javascript:void(0)" onclick="return deleteAudio('1')"><i class="icon-delete"></i></a>
           </li>
-          
+
         </ul>
       </div>
   </div>
@@ -309,6 +308,6 @@
   <article>This is a test description This is a test description This is a test description </article>
   <span class="datetime">Mar 29, 2015 5.00 pm</span>
 </div>
-<?php 
+<?php
 	include(NAVIGATION_PATH."/footer.php");
 ?>
