@@ -28,16 +28,39 @@
 </head>
 <body>
 <!-- Success or Error Messages-->
-<div class="action_messages success">Bruce Wayn added as your friend successfully.</div>
-<div class="action_messages failure">Bruce Wayn added as your friend successfully.</div>
+<?php
+	if(isset($_SESSION['messages_success']) && $_SESSION['messages_success'] !== '') {
+?>
+	<div class="messages_success"><?php echo $_SESSION['messages_success']; ?></div>
+<?php
+	}
+
+	if(isset($_SESSION['messages_failure']) && $_SESSION['messages_failure'] !== '') {
+?>
+	<div class="messages_failure"><?php echo $_SESSION['messages_failure']; ?></div>
+<?php
+	}
+?>
+
+
+<?php
+	$_SESSION['messages_success'] = '';
+	unset($_SESSION['messages_success']);
+	$_SESSION['messages_failure'] = '';
+	unset($_SESSION['messages_failure']);
+?>
 <div class="main">
   <header>
-    <a href="dashboard.php"><img src="<?php echo IMAGE_PATH_HTTP."/logo.png";?>"/></a>
-		<?php
-      if($_SESSION['login'] == '1'){
+    <a href="<?php echo FOLDER_PATH_HTTP;?>index.php"><img src="<?php echo IMAGE_PATH_HTTP."/logo.png";?>"/></a>
+	<?php
+	// echo $_SESSION['login'];die;
+    if($_SESSION['login'] == '1'){
     ?>
-          <div class="welcome_heading">Welcome <a href="<?php echo FOLDER_PATH_HTTP.'profile.php';?>" class="username_text">Prateek Magarde</span> | <a href="<?php echo FOLDER_PATH_HTTP;?>logout.php" class="header_logout_link">Logout</a> </div>
-          <?php
-      }
+	<div class="welcome_heading">Welcome <a href="<?php echo FOLDER_PATH_HTTP;?>maintenence.php" class="username_text">Prateek Magarde</span> | <a href="<?php echo FOLDER_PATH_HTTP;?>logout.php" class="header_logout_link">Logout</a> </div>
+    <?php
+    } else { ?>
+	<div class="welcome_heading"><a href="<?php echo FOLDER_PATH_HTTP;?>login.php" class="header_logout_link">Admin</a> </div>
+	<?php
+	}
     ?>
 	</header>

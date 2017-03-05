@@ -9,6 +9,6 @@
 	$AddJS	=	array("common");
 
 	//View HTML
-	include_once(VIEW_PATH."/index.html");
+	include_once(VIEW_PATH."/maintenence.html");
 
 ?>

@@ -76,10 +76,10 @@
 	define('UPLOAD_PATH_HTTP', FOLDER_PATH_HTTP.'upload');
 
 	//CONTROLLER PATH
-	define('CONTROLLER_PATH', FOLDER_PATH.'controller');
+	define('CONTROLLER_PATH', FOLDER_PATH.'controller/');
 
   //CONTROLLER PATH HTTP
-	define('CONTROLLER_PATH_HTTP', FOLDER_PATH_HTTP.'controller');
+	define('CONTROLLER_PATH_HTTP', FOLDER_PATH_HTTP.'controller/');
 
 	//SET INI VALUES
 	define('TIMELIMIT',120);
@@ -89,21 +89,6 @@
 	define("DB_HOST",'localhost');
 	define("DB_USERNAME",'root');
 	define("DB_PASSWORD",'');
-	define("DATABASE",'me');
-
-	//Admin details
-	define("ADMIN_MAIL",'admin@ecommera.co.uk');
-
-	//No Record messages
-	define("NOPROJECTFOUND",'No projects found');
-	define("NOURLFOUND",'No project URLs found');
-	define("NORESULTFOUND",'No Record Found');
-
-	//Global veriables
-	define("DB_SWITCH","OFF");
-
-  //---------------------------------------PRE DEFINED FUNCTIONS -------------------------------//
-  //Reuse Function
-  include(FOLDER_PATH."reuseFunction.php");
+	define("DATABASE",'invincible');
 
 ?>

@@ -11,19 +11,18 @@
             $password = isset($_POST['password']) ? $_POST['password'] : '';
 
             $select = "*";
-            $table = "sq_user";
+            $table = "iz_user";
             $where = "username = '".$username."' AND password = '".md5($password)."' AND is_active = 1";
             $data = $db->select($select, $table, $where);
-
             if(count($data)) {
                 $_SESSION['login'] = 1;
                 $_SESSION['username'] = $username;
                 $_SESSION['password'] = $password;
-                @header('location:'.FOLDER_PATH_HTTP.'dashboard.php');
+                @header('location:'.FOLDER_PATH_HTTP.'index.php');
                 die;
             } else {
-                $_SESSION['message'] = "Username or Password may be incorrect";
-                @header('location:'.FOLDER_PATH_HTTP.'index.php');
+                $_SESSION['messages_failure'] = "Username or Password may be incorrect";
+                @header('location:'.FOLDER_PATH_HTTP.'login.php');
                 die;
             }
 

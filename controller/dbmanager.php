@@ -10,26 +10,26 @@
             }
 
             // Select DB
-            mysql_select_db(DB_NAME);
+            mysql_select_db(DATABASE);
 
             return $conn;
         }
 
         function select($select, $table, $where) {
             $conn = $this->connection();
+            $data = array();
 
             $query = "SELECT ".$select." FROM ". $table;
-            if($where)
+            if($where) {
                 $query .= " WHERE ".$where;
-
+            }
             $result = mysql_query($query, $conn);
 
             if(!$result) {
-                die('Could not get data: ' . mysql_error());
+                return $data;
             }
 
             $data = mysql_fetch_object($result);
-
             $this->close_connection($conn);
 
             return $data;

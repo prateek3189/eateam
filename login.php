@@ -5,8 +5,12 @@
 	//Add CSS
 	$AddCSS	=	array("style");
 
-  //Add JS
-	$AddJS	=	array("common");
+    //Add JS
+	$AddJS	=	array("jquery", "common");
+
+    if(isset($_SESSION['login']) && $_SESSION['login'] === 1) {
+        @header('location:'.FOLDER_PATH_HTTP.'index.php');
+    }
 
 	//View HTML
 	include(VIEW_PATH."/login.html");
