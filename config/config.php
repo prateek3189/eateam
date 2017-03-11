@@ -12,7 +12,7 @@
 	session_start();
 
 	// DEV_MODE
-    define("DEV_MODE", true);
+    define("DEV_MODE", false);
 
 	if(DEV_MODE) {
         //ERROR Reporting
@@ -27,8 +27,18 @@
 
 	if(DEV_MODE) {
 	    $req_uri	=	"/invinciblezone/";
+        //DATABASE DETAILS
+    	define("DB_HOST",'localhost');
+    	define("DB_USERNAME",'root');
+    	define("DB_PASSWORD",'');
+    	define("DATABASE",'invincible');
 	} else {
 	    $req_uri	=	"/";
+        //DATABASE DETAILS
+    	define("DB_HOST",'148.72.232.172:3306');
+    	define("DB_USERNAME",'Invincible3189');
+    	define("DB_PASSWORD",'iNvincible3189$$');
+    	define("DATABASE",'invincible');
 	}
 
   //Title
@@ -36,7 +46,8 @@
 
 	//FOLDER PATH
 	define('FOLDER_PATH_HTTP', $protocol.'://'.HTTP_HOST.$req_uri);
-	define('FOLDER_PATH', rtrim(DOCUMENT_ROOT,'/').$req_uri);
+    $folder_path = rtrim(DOCUMENT_ROOT,'/').$req_uri;
+	define('FOLDER_PATH', str_replace("/", "\\", $folder_path));
 
 	//View Path
 	define('VIEW_PATH', FOLDER_PATH.'view');
@@ -53,9 +64,9 @@
 	//Image Path
 	define('IMAGE_PATH_HTTP', FOLDER_PATH_HTTP.'images');
 
-  //Post Path
+    //Post Path
 	define('POST_IMAGE_HTTP', FOLDER_PATH_HTTP.'post/');
-  define('POST_IMAGE', FOLDER_PATH.'post');
+    define('POST_IMAGE', FOLDER_PATH.'post');
 
 	//CSS Path
 	define('CSS_PATH_HTTP', FOLDER_PATH_HTTP.'css');
@@ -76,7 +87,7 @@
 	define('UPLOAD_PATH_HTTP', FOLDER_PATH_HTTP.'upload');
 
 	//CONTROLLER PATH
-	define('CONTROLLER_PATH', FOLDER_PATH.'controller/');
+	define('CONTROLLER_PATH', FOLDER_PATH.'controller\\');
 
   //CONTROLLER PATH HTTP
 	define('CONTROLLER_PATH_HTTP', FOLDER_PATH_HTTP.'controller/');
@@ -84,11 +95,5 @@
 	//SET INI VALUES
 	define('TIMELIMIT',120);
 	ini_set('max_execution_time', TIMELIMIT);
-
-	//DATABASE DETAILS
-	define("DB_HOST",'localhost');
-	define("DB_USERNAME",'root');
-	define("DB_PASSWORD",'');
-	define("DATABASE",'invincible');
 
 ?>
